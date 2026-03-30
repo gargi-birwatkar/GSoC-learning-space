@@ -1,0 +1,12 @@
+# Core Agent-Based Modeling
+mesa==2.4.0
+
+# LLM Abstraction & API Connectivity
+litellm==1.34.0
+
+# Environment Variable Management
+python-dotenv==1.0.1
+
+# Utilities
+asyncio
+tiktoken
