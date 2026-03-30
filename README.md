@@ -45,9 +45,9 @@ The functions are asynchronous so that it can implement 100s of steps for the si
 
 ### i. Environment Preparation
 ```bash
-# Clone the repository
-git clone [YOUR_REPO_URL]
-cd [YOUR_REPO_NAME]
+# Clone your fork of the GSoC Learning Space
+git clone [https://github.com/gargi-birwatkar/GSoC-learning-space.git](https://github.com/gargi-birwatkar/GSoC-learning-space.git)
+cd GSoC-learning-space
 
 ```
 ### ii. Install Dependencies
