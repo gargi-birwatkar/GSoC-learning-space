@@ -1,4 +1,5 @@
-### MesaLLM: LLM-Driven Agent-Based Modeling
+# Mesa-agent-framework 🤖
+LLM-Driven Agent-Based Modeling using Mesa & LiteLLM.
 
 **MesaLLM** replaces the rigid, math-based decision trees of traditional Mesa simulations with LLM reasoning. Most multi-agent systems rely on hardcoded "if-else" logic; this framework swaps that out for a modular "Brain" architecture that allows agents to think, react, and maintain social context using natural language.
 
