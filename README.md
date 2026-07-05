@@ -12,25 +12,24 @@ LLM-Driven Agent-Based Modeling using Mesa & LiteLLM.
 *   **The Goal:** Stop hardcoding rules and let agents negotiate using natural language. It turns the simulation into a plug-and-play tool for researchers.Due to which coders who do not like difficult or complex setup can easily make simulations with the flexible modules. so the idea will be of the coder and the heavy connection will be done by the modules itself.
 
 ### 2. The Modular Structure
-
+``` text
 MESSA/
 ├── modules/
-│   ├── mesa_llm.py          # Core Engine (Singleton, Token Guard, Retry Logic)       
-│   └── mesa_mas.py          # Framework Orchestrator (BaseBrain, MASWorld)             
+│   ├── mesa_llm.py          # Core Engine (Singleton, Token Guard, Retry Logic)
+│   └── mesa_mas.py          # Framework Orchestrator (BaseBrain, MASWorld)
 ├── implementation_example/
 │   ├── traffic.py           # Multi-agent bottleneck simulation
 │   └── simulation.py        # Stress test script
 ├── .env.example             # Template for environment setup
 ├── .gitignore               # Prevents tracking of sensitive/temp files
-├── requirement.txt          # Dependenc
+├── requirement.txt          # Dependencies
 ├── README.md                # Project documentation
 └── motivation.md            # GSoC project rationale
-
-
-*   **`mesa_llm.py`:**The core engine handling. This handles the API heavy lifting. I used LiteLLM so people can swap between Gemini, GPT-4, or even local models without breaking the code.This also has algorithm for efficient memory management so that the model does not hallucinate. It also includes the logic for handelling the calls so that they remain in the specified call rate limits, token limits etc.
+```
+*   **mesa_llm.py** : The core engine handling. This handles the API heavy lifting. I used LiteLLM so people can swap between Gemini, GPT-4, or even local models without breaking the code.This also has algorithm for efficient memory management so that the model does not hallucinate. It also includes the logic for handelling the calls so that they remain in the specified call rate limits, token limits etc.
 The functions are asynchronous so that it can implement 100s of steps for the simulation smoothly.
 
-*   **`mesa_mas.py`:**The framework orchestrator that manages agent turn-taking . It’s where I define the personalities (personas) and how they exist in the world.This is the file that has the methods and classes through which the user will establish wht Base-brain(llm model) and generic agent are generated and assigned that particular brain. 
+*   **mesa_mas.py**: The framework orchestrator that manages agent turn-taking . It’s where I define the personalities (personas) and how they exist in the world.This is the file that has the methods and classes through which the user will establish wht Base-brain(llm model) and generic agent are generated and assigned that particular brain. 
 
 ### 3. Testing Implementation
  **traffic.py**: 
@@ -47,8 +46,8 @@ The functions are asynchronous so that it can implement 100s of steps for the si
 ### i. Environment Preparation
 ```bash
 # Clone your fork of the GSoC Learning Space
-git clone [https://github.com/gargi-birwatkar/GSoC-learning-space.git](https://github.com/gargi-birwatkar/GSoC-learning-space.git)
-cd GSoC-learning-space
+git clone https://github.com/gargi-birwatkar/mesa-agent-framework.git
+cd mesa-agent-framework
 
 ```
 ### ii. Install Dependencies
